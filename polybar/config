@@ -70,7 +70,7 @@ font-3 = Icons:style=Regular:fontsize=10:antialias=true;2
 ;modules are named below in each definition
 modules-left = i3
 modules-center = spotify
-modules-right = system-usb-udev updates-pacman-aurhelper pulseaudio wlan date-time
+modules-right = system-usb-udev updates-pacman-aurhelper battery pulseaudio wlan date-time
 
 tray-position = none
 tray-padding = 0
@@ -320,7 +320,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 full-at = 98
 
