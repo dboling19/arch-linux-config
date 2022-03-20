@@ -220,12 +220,10 @@ set $mode_launcher Launch: [b]rowser [d]iscord [s]potify [c]ode [r]anger
 bindsym Mod4+o mode "$mode_launcher"
 mode "$mode_launcher" {
 	bindsym b exec google-chrome-stable, mode "default"
-	bindsym q exec qutebrowser, mode "default"
-	bindsym s exec spt, mode "default"
+	bindsym s exec spotify, mode "default"
 	bindsym d exec discord, mode "default"
 	bindsym c exec code, mode "default"
-	bindsym n exec nemo, mode "default"
-	bindsym r exec terminator -e ranger, mode "default"
+	bindsym r exec alacritty -e ranger, mode "default"
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
