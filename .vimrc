@@ -4,11 +4,6 @@
 " ||
 " ############################################################################
 
-com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
-nnoremap = :FormatXML<Cr>
-
-
-
 " keep n lines top/bottom for scope
 set scrolloff=10
 set sidescrolloff=15
@@ -20,11 +15,12 @@ set smartcase
 " make search incremental
 set incsearch
 set nohlsearch
-"set gdefault
+set smartcase
 
+"configure tab and indentation
 set showmatch
 set shiftround
-set ts=4
+set tabstop=4
 "set textwidth=80
 set shiftwidth=4
 set expandtab
@@ -33,6 +29,8 @@ set smartindent
 set autoindent
 set number
 set ruler
+"set cursorline
+set background=dark
 :%retab!            " Retabulate the whole file
 "set linebreak
 
@@ -40,8 +38,8 @@ set ruler
 set nowrap
 set whichwrap=h,l,~,<,>
 
-" color that text!
-syntax on
+"color that text!
+syntax enable
 color industry
 
 " Jump to last position when reopening a file
@@ -52,32 +50,10 @@ endif
 
 set fileencoding=utf-8
 set fileformat=unix
-" ............................................................................
-"       GVIM vs regular vim differences
-" ............................................................................
-set bg=dark
-colorscheme industry
-if has("syntax") && has("gui_running")
-  set guifont=Inconsolata\ 11
-  "set guifont=Andale\ Mono\ 9
-  "set guifont=ProFont\ 11
-  colorscheme desert
-  set lines=56 columns=90
-endif
+
 
 " ............................................................................
-"       Vimspell Options
-" ............................................................................
-let spell_auto_type = "tex,mail,text,html,sgml"
-set mousemodel=popup
-let spell_executable = "aspell"
-
-" ............................................................................
-"       Plugins
-" ............................................................................
-
-" ............................................................................
-"       Maps
+"       Mapping
 " ............................................................................
 
 " Silently eliminate all highlighting from the screens
