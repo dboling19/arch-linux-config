@@ -51,6 +51,7 @@ endif
 set fileencoding=utf-8
 set fileformat=unix
 
+execute pathogen#infect()
 
 " ............................................................................
 "       Mapping
