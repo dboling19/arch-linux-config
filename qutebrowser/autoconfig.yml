@@ -33,6 +33,12 @@ settings:
   content.notifications.enabled:
     https://messages.google.com: true
     https://www.youtube.com: true
+  url.default_page:
+    global: https://startpage.com
   url.searchengines:
     global:
       DEFAULT: https://www.startpage.com/search?query={}
+  url.start_pages:
+    global: https://startpage.com
+  window.hide_decoration:
+    global: false
