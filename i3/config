@@ -39,7 +39,7 @@ set $right semicolon
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod4+Return exec alacritty
+bindsym Mod4+Return exec konsole
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -198,13 +198,13 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-exec --no-startup-id nitrogen --random "/home/dboling/Pictures/Wallpapers/" --set-zoom-fill
+#exec_always watch -n 2 nitrogen --random "/home/dboling/Pictures/Wallpapers/" --set-zoom-fill
+exec_always feh --recursive --bg-fill --randomize /home/dboling/Pictures/Wallpapers/*
 exec_always --no-startup-id .config/polybar/launch.sh
 exec_always xset dpms 300 900
 exec_always xinput set-prop "PIXA3854:00 093A:0274 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "PIXA3854:00 093A:0274 Touchpad" "libinput Natural Scrolling Enabled" 1
 exec_always picom &
-exec batsignal -bie
 
 bindsym Control+Mod1+l exec loginctl lock-session
 bindsym Control+Shift+s exec flameshot gui
@@ -223,11 +223,11 @@ for_window [class="Galculator"] floating enable
 set $mode_launcher Launch: [b]rowser [d]iscord [s]potify [c]ode [r]anger
 bindsym Mod4+o mode "$mode_launcher"
 mode "$mode_launcher" {
-	bindsym b exec google-chrome-stable, mode "default"
+	bindsym b exec firefox, mode "default"
 	bindsym s exec spotify, mode "default"
 	bindsym d exec discord, mode "default"
-	bindsym c exec code, mode "default"
-	bindsym r exec alacritty -e ranger, mode "default"
+	bindsym c exec codium, mode "default"
+	bindsym r exec dolphin, mode "default"
 
 	bindsym Escape mode "default"
 	bindsym Return mode "default"
